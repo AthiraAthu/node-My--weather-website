@@ -1,7 +1,4 @@
 
-// console.log('Testing client side javascript')
-
-
 fetch('http://localhost:3000/weather?address=Delhi').then((response) =>{
     response.json().then((data) =>{
         if(data.error){
