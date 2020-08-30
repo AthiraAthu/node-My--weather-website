@@ -4,6 +4,7 @@ const express=require('express')
 const hbs=require('hbs')
 
 const app=express()
+const port=process.env.PORT || 3000
 
 const path=require('path')
 const findWeather = require('./utils/weatherApp')
@@ -63,6 +64,6 @@ app.get('*',(req,res)=>{
     res.render('error',{message:"Page not found",title:"Static Text",name:"Athira"})
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is on port 3000')
 })
