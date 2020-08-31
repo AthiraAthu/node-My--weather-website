@@ -8,15 +8,12 @@ const findWeather= (address,callback)=>{
         let res='';
         const data=JSON.parse(body)
         if(data.cod==='404'){
-            // res=res+data.cod
             callback(data.cod)
         }
         else{
-            // res=res+data.main.temp
             callback(`Temperature : ${data.main.temp} C , Humidity : ${data.main.humidity} % , Wind : ${data.wind.speed} m/s`)
         }
         
-        // callback(res)
 
         
         
