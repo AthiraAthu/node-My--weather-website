@@ -49,7 +49,7 @@ app.get('/weather',(req,res)=>{
             return res.send({error:'Invalid address'})
         }
     
-    res.send({Temperature:data,Location:req.query.address})
+    res.send({weatherInformation:data,location:req.query.address})
 
     })
 
